@@ -1,0 +1,100 @@
+{
+  "common": {
+    "list_empty": "Trống",
+    "submit": "Gửi",
+    "cancel": "Huỷ",
+    "close": "Đóng",
+    "yes": "Đồng ý",
+    "no": "Không",
+    "ok": "Có",
+    "done": "Thành Công",
+    "settings": "Cài đặc"
+  },
+  "authentication":{
+    "username":"Tài khoản",
+    "password":"Mật khẩu",
+    "login_label":"ĐĂNG NHẬP",
+    "login_button":"ĐĂNG NHẬP",
+    "logout_button":"Đăng xuất",
+    "valid_email": "Vui lòng nhập email hợp lệ",
+    "registered_email": "Vui lòng nhập một email đã đăng ký",
+    "short_password": "Mật khẩu phải có ít nhất 8 ký tự",
+    "short_confirm_password": "Xác nhận mật khẩu phải có ít nhất 8 ký tự",
+    "password_required": "Mật khẩu là trường bắt buộc",
+    "error_incorrect": "Email hoặc mật khẩu không chính xác"
+  },
+  "message":{
+    "msg_updateSuccess":"Ok",
+    "msg_error":"Lỗi"
+  },
+  "navigation":{
+    "home":"Trang Chủ",
+    "cart":"Giỏ hàng"
+  },
+  "alert": {
+    "ok": "OK",
+    "cancel": "Huỷ",
+    "settings": "Cài đặt",
+    "title_error": "Phản đối",
+    "title_confirm": "Bạn có chắc không?",
+    "message_logout": "Bạn có chắc chắn bạn muốn thoát?",
+    "message_error_network": "Kết nối Internet của bạn dường như ngoại tuyến hoặc quá yếu. Vui lòng thử lại sau.",
+    "message_comment_empty": "Vui lòng để lại nhận xét.",
+    "message_login_error": "Không thể đăng nhập bằng thông tin đăng nhập đã cung cấp",
+    "photo_unavailable_title": "Thư viện ảnh không khả dụng",
+    "photo_unavailable_message": "Thư viện ảnh không có sẵn. Vui lòng kiểm tra cài đặt iPhone của bạn cho ứng dụng này và bật Ảnh.",
+    "camera_unavailable_title": "Máy ảnh không khả dụng",
+    "camera_unavailable_message": "Máy ảnh không khả dụng. Vui lòng kiểm tra cài đặt iPhone của bạn cho ứng dụng này và bật Máy ảnh.",
+    "photo_access_denied_title": "Quyền truy cập Ảnh bị Từ chối",
+    "photo_access_denied_message": "Noir Caesar không có quyền truy cập vào ảnh của bạn. Để bật quyền truy cập, hãy nhấn vào Cài đặt và bật Ảnh.",
+    "camera_access_denied_title": "Quyền truy cập máy ảnh bị từ chối",
+    "camera_access_denied_message": "Noir Caesar không có quyền truy cập vào máy ảnh của bạn. Để bật quyền truy cập, hãy nhấn vào Cài đặt và bật Máy ảnh.",
+    "micro_unavailable_title": "Micro không khả dụng",
+    "micro_unavailable_message": "Micro không có sẵn. Vui lòng kiểm tra cài đặt Điện thoại của bạn cho ứng dụng này và bật Micro.",
+    "micro_access_denied_title": "Truy cập vi mô Denie",
+    "micro_access_denied_message": "Noir Caesar không có quyền truy cập vào vi của bạn. Để bật quyền truy cập, hãy nhấn vào Cài đặt và bật Micro.",
+    "no_data_found": "Không tìm thấy dữ liệu nào"
+  },
+  "document_picker": {
+    "upload_collection": "Tải lên bộ sưu tập",
+    "choose_books": "Chọn sách",
+    "choose_videos": "Chọn Videos",
+    "choose_audios": "Chọn Audios",
+    "cancel": "Huỷ",
+    "upload_avatar": "Cập nhật avatar",
+    "take_photo": "Máy ảnh",
+    "choose_photo": "Chọn hình",
+    "choose_video": "Chọn video"
+  },
+  "cart":{
+    "total":"Tổng cộng",
+    "validate":"Thanh Toán",
+    "remove":"Xoá",
+    "request_validate":"Bạn chắc chắn muốn thanh toán?",
+    "later":"Để sau",
+    "successfully_purchase":"Mua Thành công",
+    "empty":"Trống",
+    "exist_cart":"Sản phẩm này đã có trong giỏ hàng"
+  },
+  "network":{
+    "status":"Kiểm tra kết nối mạng ..."
+  },
+  "menu":{
+    "home":"Trang chủ",
+    "component":"Thành phần chính",
+    "setting":"Cài đặt",
+    "picker_select": {
+      "placeholder": "Select a value..."
+    }
+  },
+  "searchbar": {
+    "search_name_placeholder": "Search by name",
+    "search_your_product": "Search your product",
+    "to": "To:"
+  },
+  "setting":{
+    "language":"Chọn ngôn ngữ",
+    "mode":"Chuyển sang chế độ bang đêm"
+  }
+
+}

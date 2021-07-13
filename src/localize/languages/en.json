@@ -1,0 +1,102 @@
+{
+  "common": {
+    "list_empty": "Data is empty",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "done": "Done",
+    "settings": "Settings"
+  },
+  "authentication":{
+    "username":"Username",
+    "password":"Your Password",
+    "login_label":"SIGN IN",
+    "login_button":"SIGN IN",
+    "logout_button":"Logout",
+    "valid_email": "Please enter a valid email",
+    "registered_email": "Please enter a registered email",
+    "short_password": "Password must have at least 8 characters",
+    "short_confirm_password": "Confirm password must have at least 8 characters",
+    "password_required": "Password is a required field",
+    "error_incorrect": "Email or password incorrect"
+  },
+  "message":{
+    "msg_updateSuccess":"Done",
+    "msg_error":"Error"
+  },
+  "navigation":{
+    "home":"Home",
+    "cart":"Cart"
+  },
+  "alert": {
+    "ok": "OK",
+    "cancel": "Cancel",
+    "settings": "Settings",
+    "title_error": "Opps",
+    "title_confirm": "Are you sure?",
+    "message_logout": "Are you sure you want to log out?",
+    "message_error_network": "Your Internet connection appears to be offline or too weak. Please try again later.",
+    "message_comment_empty": "Please leave a comment.",
+    "message_login_error": "Unable to login with provided credentials",
+    "photo_unavailable_title": "Photo Library Unavailable",
+    "photo_unavailable_message": "Photo library is not available. Please check your iPhone settings for this app and enable Photos.",
+    "camera_unavailable_title": "Camera Unavailable",
+    "camera_unavailable_message": "Camera is not available. Please check your iPhone settings for this app and enable Camera.",
+    "photo_access_denied_title": "Photos Access Denied",
+    "photo_access_denied_message": "Noir Caesar does not have access to your photos. To enable access, tap Settings and turn on Photos.",
+    "camera_access_denied_title": "Camera Access Denied",
+    "camera_access_denied_message": "Noir Caesar does not have access to your camera. To enable access, tap Settings and turn on Camera.",
+    "micro_unavailable_title": "Micro Unavailable",
+    "micro_unavailable_message": "Micro is not available. Please check your Phone settings for this app and enable Micro.",
+    "micro_access_denied_title": "Micro Access Denied",
+    "micro_access_denied_message": "Noir Caesar does not have access to your micro. To enable access, tap Settings and turn on Micro.",
+    "message_error_default": "Something went wrong. Please try again in a bit.",
+    "no_data_found": "No data found"
+  },
+  "document_picker": {
+    "upload_collection": "Upload Collection",
+    "choose_books": "Choose Books",
+    "choose_videos": "Choose Videos",
+    "choose_audios": "Choose Audios",
+    "cancel": "Cancel",
+    "upload_avatar": "Upload Avatar",
+    "take_photo": "Take Photo",
+    "choose_photo": "Choose Photo",
+    "choose_video": "Choose Video"
+  },
+  "cart":{
+    "total":"Total",
+    "validate":"Validate",
+    "remove":"Remove",
+    "request_validate":"Are you sure you want to pay?",
+    "later":"Later",
+    "successfully_purchase":"Successfully purchase",
+    "empty":"Empty",
+    "exist_cart":"Previously purchased product"
+  
+  },
+  "network":{
+    "status":"Check network connection..."
+  },
+"menu":{
+  "home":"Home",
+  "component":"Common component",
+  "setting":"Settings"
+},
+"picker_select": {
+  "placeholder": "Select a value..."
+},
+"searchbar": {
+  "search_name_placeholder": "Search by name",
+  "search_your_product": "Search your product",
+  "to": "To:"
+},
+"setting":{
+  "language":"Select language",
+  "mode":"Switch to night mode"
+}
+  
+}

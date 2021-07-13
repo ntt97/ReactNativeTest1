@@ -1,0 +1,108 @@
+{
+  "files.exclude": {
+    "amplify/.config": true,
+    "amplify/**/*-parameters.json": true,
+    "amplify/**/amplify.state": true,
+    "amplify/**/transform.conf.json": true,
+    "amplify/#current-cloud-backend": true,
+    "amplify/backend/amplify-meta.json": true,
+    "amplify/backend/awscloudformation": true,
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "node_modules": true,
+    "npm-debug.*": true,
+    "dist": true,
+    ".editorconfig": true,
+    "build-config": true,
+    ".vscode": false,
+    "**/coverage": true,
+    "README.md": false,
+    "**/log": true,
+    "typings": true,
+    "e2e-report": true,
+    "output": true,
+    "results": true,
+    "reports": true,
+    "**/version.json": true,
+    "**/gitversion.txt": true,
+    "**/*.retry": true,
+    "ios/Pods": false,
+    "ios/main.jsbundle": true,
+    "**/.classpath": true,
+		"**/.project": true,
+		"**/.settings": true,
+		"**/.factorypath": true
+
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "git.confirmSync": false,
+  "explorer.confirmDelete": false,
+  "workbench.colorTheme": "Dracula Soft",
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true, 
+  "editor.suggestSelection": "first",
+  "terminal.integrated.fontSize":12.5,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "cSpell.userWords": [
+      "TOATHUOC",
+      "countdowntime",
+      "logg"
+  ],
+  "sync.gist": "57b6615ebd257914784b33f9876d790c",
+  "gitlens.gitCommands.closeOnFocusOut": true,
+  "editor.codeActionsOnSave": {
+     "source.fixAll.eslint": true,
+  },
+  "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "never",
+	"editor.minimap.enabled": false,
+	"breadcrumbs.enabled": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.startupEditor": "newUntitledFile",
+	"editor.formatOnSave": false,
+	"[javascript]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+  "[javascriptreact]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[html]": {
+		"editor.formatOnSave": true
+	},
+	"[java]": {
+		"editor.formatOnSave": true
+	},
+	"[scss]": {
+		"editor.formatOnSave": true
+	},
+	"[css]": {
+		"editor.formatOnSave": true
+	},
+	"prettier.semi": true,
+	"prettier.singleQuote": true,
+  "files.associations": {
+		"*.js": "javascriptreact"
+  },
+  "git.autofetch": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "terminal.integrated.tabs.enabled": true,
+
+  
+}
