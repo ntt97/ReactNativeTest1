@@ -5,10 +5,6 @@ const listMenu: Array<Menu> = [
     name: 'menu.home',
   },
   {
-    icon: 'list-alt',
-    name: 'menu.component',
-  },
-  {
     icon: 'cogs',
     name: 'menu.setting',
   },

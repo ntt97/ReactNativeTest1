@@ -14,6 +14,7 @@ def shared_pods
   pod 'Permission-Camera', :path => "#{permissions_path}/Camera/Permission-Camera.podspec"
   pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary/Permission-PhotoLibrary.podspec"
   pod 'Permission-Microphone', :path => "#{permissions_path}/Microphone/Permission-Microphone.podspec"
+ 
   
   # Enables Flipper.
   #
@@ -23,9 +24,9 @@ def shared_pods
 end
 
 
+
 target 'production' do
   shared_pods
- 
 end
 
 target 'development' do
@@ -33,11 +34,26 @@ target 'development' do
  
 end
 
-
 target 'staging' do
   shared_pods
  
 end
+
+pre_install do |installer|
+  $RNMBGL.pre_install(installer)
+end
+
+
+use_flipper!({ 'Flipper-Folly' => '2.5.3', 'Flipper' => '0.87.0', 'Flipper-RSocket' => '1.3.1' })
+post_install do |installer|
+  $RNMBGL.post_install(installer)
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings["ONLY_ACTIVE_ARCH"] = "NO"
+    end
+  end
+end
+
 
 project 'TemplateRN',
     'Debug' => :debug,
