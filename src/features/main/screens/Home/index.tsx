@@ -20,11 +20,15 @@ import { PropsItemProduct } from '@types';
 import withLanguageChange from 'hoc/HocLanguage';
 import NavigationActionsService from 'navigation';
 import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { FlatList, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import ItemLoading, { FooterLoading } from '../../components/ItemLoading';
 import ItemProduct from '../../components/ItemProduct';
 import styles from './styles';
+import Orientation from 'react-native-orientation';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { HEIGHT } from '@constants/vars';
 export interface Props {
   componentId?: string;
 }
@@ -33,6 +37,7 @@ const HOME = (props: Props) => {
   const dispatch = useDispatch();
   const listData = useSelector<RootState>((state: RootState) => state.product) as ProductState;
   const listCart = useSelector<RootState>((state: RootState) => state.cart.listCart) as Array<any>;
+  const [orientation, setOrientation] = useState<string>('PORTRAIT');
   const { listProduct, isLoading, pagination, isEndData, refreshing } = listData;
 
   useEffect(() => {
@@ -53,7 +58,21 @@ const HOME = (props: Props) => {
         refresh: true,
       }),
     );
+    const initial = Orientation.getInitialOrientation();
+    _orientationDidChange(initial);
+    Orientation.addOrientationListener(_orientationDidChange);
   }, []);
+
+  const _orientationDidChange = (orientation: any) => {
+    if (orientation === 'LANDSCAPE') {
+      // do something with landscape layout
+
+      setOrientation('LANDSCAPE');
+    } else {
+      // do something with portrait layout
+      setOrientation('PORTRAIT');
+    }
+  };
 
   const onAddToCart = (item: any, quantity: number) => {
     const isExist = listCart.some((e: any) => e?.item.id === item.id);
@@ -104,6 +123,7 @@ const HOME = (props: Props) => {
     return (
       <ViewDarkMode style={{ flex: 1 }}>
         <Header
+          isPortrait={orientation == 'PORTRAIT'}
           iconVector="bars"
           noShadow={false}
           mainText={translate('navigation.home')}
@@ -115,10 +135,44 @@ const HOME = (props: Props) => {
       </ViewDarkMode>
     );
   }
+  const renderFlatPortrait = () => (
+    <FlatList
+      data={listProduct}
+      renderItem={(item: PropsItemProduct) => {
+        return <ItemProduct isPortrait={orientation == 'PORTRAIT'} {...item} addToCart={onAddToCart} />;
+      }}
+      keyExtractor={item => item.id}
+      ListFooterComponent={renderFooter}
+      onRefresh={handleRefresh}
+      refreshing={refreshing}
+      onEndReached={handleLoadMore}
+      onEndReachedThreshold={0.5}
+      initialNumToRender={10}
+      numColumns={3}
+    />
+  );
+
+  const renderFlatLandscape = () => (
+    <FlatList
+      data={listProduct}
+      renderItem={(item: PropsItemProduct) => {
+        return <ItemProduct isPortrait={orientation == 'PORTRAIT'} {...item} addToCart={onAddToCart} />;
+      }}
+      keyExtractor={item => item.id}
+      ListFooterComponent={renderFooter}
+      onRefresh={handleRefresh}
+      refreshing={refreshing}
+      onEndReached={handleLoadMore}
+      onEndReachedThreshold={0.5}
+      initialNumToRender={10}
+      numColumns={6}
+    />
+  );
 
   return (
     <ViewDarkMode style={styles.wrapper}>
       <Header
+        isPortrait={orientation == 'PORTRAIT'}
         iconVector="bars"
         noShadow={false}
         mainText={translate('navigation.home')}
@@ -127,21 +181,8 @@ const HOME = (props: Props) => {
         }}
       />
       <View style={styles.container}>
-        <View style={styles.body}>
-          <FlatList
-            data={listProduct}
-            renderItem={(item: PropsItemProduct) => {
-              return <ItemProduct {...item} addToCart={onAddToCart} />;
-            }}
-            keyExtractor={item => item.id}
-            ListFooterComponent={renderFooter}
-            onRefresh={handleRefresh}
-            refreshing={refreshing}
-            onEndReached={handleLoadMore}
-            onEndReachedThreshold={0.5}
-            initialNumToRender={10}
-          />
-        </View>
+        {orientation == 'PORTRAIT' && <View style={styles.body}>{renderFlatPortrait()}</View>}
+        {orientation != 'PORTRAIT' && <SafeAreaView style={styles.body}>{renderFlatLandscape()}</SafeAreaView>}
       </View>
     </ViewDarkMode>
   );

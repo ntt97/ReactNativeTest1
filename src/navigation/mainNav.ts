@@ -74,9 +74,6 @@ const MainNav = () => {
           sideMenu: {
             left: isIOS ? {} : { width: 270 * WIDTH_RATIO },
           },
-          layout: {
-            orientation: ['portrait'],
-          },
         },
         center: {
           bottomTabs: {

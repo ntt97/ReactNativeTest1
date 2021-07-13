@@ -12,11 +12,7 @@ class NavigationActionsService {
   private static instance: NavigationActionsService;
 
   static initInstance(navigation: any): NavigationActionsService {
-    Navigation.setDefaultOptions({
-      layout: {
-        orientation: ['portrait'],
-      },
-    });
+    Navigation.setDefaultOptions({});
     if (!NavigationActionsService.instance) {
       NavigationActionsService.instance = new NavigationActionsService();
       Navigation.events().registerComponentDidAppearListener(({ componentId, componentName, passProps }) => {

@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 1,
-    paddingHorizontal: 20,
-    paddingVertical: 5,
+    paddingHorizontal: 5,
+    paddingVertical: 10,
   },
   //Item
   btnCircle: {

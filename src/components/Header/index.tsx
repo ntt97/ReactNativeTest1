@@ -45,6 +45,7 @@ export interface Props {
   stylesImageLeft?: StyleProp<ImageStyle>;
   children?: any;
   iconVector?: string;
+  isPortrait?: boolean;
 }
 
 const hitSlop = {
@@ -71,6 +72,7 @@ const Header = ({
   stylesImageLeft = {},
   children,
   iconVector,
+  isPortrait = true,
 }: Props) => {
   const isConnected = useSelector<RootState>((state: RootState) => state.networkStatus.isConnected) as boolean;
 
@@ -126,8 +128,15 @@ const Header = ({
       <View style={isConnected ? { ...styles.statusDisconnected, height: 0 } : styles.statusDisconnected}>
         <CustomText style={[styles.txtStatusDisconnected]} text={translate('network.status')} />
       </View>
-      <ViewDarkMode style={[styles.containerRowHeader, !isConnected && { height: nHeight - getStatusBarHeight() }]}>
-        <View style={styles.bodyHeader}>
+      <ViewDarkMode
+        style={[
+          styles.containerRowHeader,
+          (!isConnected || !isPortrait) && {
+            height: nHeight - getStatusBarHeight(),
+          },
+        ]}
+      >
+        <View style={[styles.bodyHeader, !isPortrait && { marginTop: 0 }]}>
           {renderLeftHeader()}
           {renderCenterHeader()}
           {renderRightHeader()}

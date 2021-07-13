@@ -11,6 +11,7 @@ export type PropsItemProduct = {
     image: string;
   };
   onChangeValue?: any;
+  isPortrait?: any;
 };
 export type PropsItemProductInCart = {
   addToCart?: any;
