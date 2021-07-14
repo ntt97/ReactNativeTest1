@@ -55,7 +55,7 @@ const SideMenu = (props: any) => {
           isDarkMode ? MainNavDarkMode() : MainNav();
           break;
         case 1:
-          NavigationActionsService.setRootNavigation(COMPONENT_SCREEN);
+          NavigationActionsService.setRootNavigation(SETTING_SCREEN);
           break;
         case 2:
           NavigationActionsService.setRootNavigation(SETTING_SCREEN);
